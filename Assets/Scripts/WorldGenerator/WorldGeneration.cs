@@ -14,7 +14,11 @@ public class WorldGeneration : MonoBehaviour
 
     [SerializeField] private List<GameObject> chunkPrefab;
     [SerializeField] private Transform cameraTransform;
-   
+
+    private void Awake()
+    {
+        ResetWorld();
+    }
     private void Start()
     {
         if(chunkPrefab.Count == 0)
