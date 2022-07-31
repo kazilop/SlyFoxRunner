@@ -111,7 +111,7 @@ Material:
     - _ClearCoatSmoothness: 0
     - _ColorMask: 15
     - _Cull: 2
-    - _Culvature: 0.001
+    - _Culvature: 0.005
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
