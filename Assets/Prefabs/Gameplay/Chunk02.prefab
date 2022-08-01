@@ -328,6 +328,51 @@ PrefabInstance:
       propertyPath: m_Name
       value: RampWood Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7307544572101353414, guid: 8a490756cc8cd4443b1d01b6220e5276,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.13700008
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307544572101353414, guid: 8a490756cc8cd4443b1d01b6220e5276,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.74385834
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307544572101353414, guid: 8a490756cc8cd4443b1d01b6220e5276,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.2457094
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307544572101353414, guid: 8a490756cc8cd4443b1d01b6220e5276,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.90683836
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307544572101353414, guid: 8a490756cc8cd4443b1d01b6220e5276,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.4214787
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307544572101353414, guid: 8a490756cc8cd4443b1d01b6220e5276,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -49.856
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422341051005789634, guid: 8a490756cc8cd4443b1d01b6220e5276,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422341051005789634, guid: 8a490756cc8cd4443b1d01b6220e5276,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422341051005789634, guid: 8a490756cc8cd4443b1d01b6220e5276,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.48
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
