@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour
@@ -14,20 +15,29 @@ public class PlayerMotor : MonoBehaviour
     public float gravity = 14.0f;
     public float terminalVelocity = 20.0f;
 
+
     public CharacterController controller;
+    public Animator animator;
 
     private BaseState state;
+
+    private bool isPaused;
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
         state = GetComponent<RunnigState>();
+
+        isPaused = true;
+
         state.Construct();
     }
 
     private void Update()
     {
-        UpdateMotor();
+        if(!isPaused)
+            UpdateMotor();
     }
 
     private void UpdateMotor()
@@ -37,6 +47,9 @@ public class PlayerMotor : MonoBehaviour
         moveVector = state.ProcessMotion();
 
         state.Transition();
+
+        animator?.SetBool("IsGround", isGrounded);
+        animator?.SetFloat("Speed", Mathf.Abs(moveVector.z));
 
         controller.Move(moveVector * Time.deltaTime);
     }
@@ -76,5 +89,38 @@ public class PlayerMotor : MonoBehaviour
         state.Destruct();
         state = s;
         state.Construct();
+    }
+
+    public void ApplyGravity()
+    {
+        verticalVelocity -= gravity * Time.deltaTime;
+
+        if(verticalVelocity < -terminalVelocity)
+            verticalVelocity = -terminalVelocity;
+    }
+
+    public void PausePlayer()
+    {
+        isPaused = true;
+    }
+
+    public void ResumePlayer()
+    {
+        isPaused = false;
+    }
+
+    public void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        string hitLayerName = LayerMask.LayerToName(hit.gameObject.layer);
+
+        if(hitLayerName == "Death")
+        {
+            ChangeState(GetComponent<DeathState>());
+        }
+    }
+
+    public void RespawnPlayer()
+    {
+      //  ChangeState(GetComponent<RespawnState>());
     }
 }
