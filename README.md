@@ -1,2 +1,2 @@
-# PiguinRunner
+# SlyFoxRunner
  Runner Game
