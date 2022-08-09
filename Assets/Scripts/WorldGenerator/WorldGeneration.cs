@@ -34,13 +34,9 @@ public class WorldGeneration : MonoBehaviour
         }
     }
 
-    
-    private void Update()
-    {
-        ScanPosition();
-    }
 
-    private void ScanPosition()
+
+    public void ScanPosition()
     {
         float cameraZ = cameraTransform.transform.position.z;
         Chunk lastChunk = activeChunks.Peek();

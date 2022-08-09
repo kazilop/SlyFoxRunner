@@ -121,6 +121,16 @@ public class PlayerMotor : MonoBehaviour
 
     public void RespawnPlayer()
     {
-      //  ChangeState(GetComponent<RespawnState>());
+        ChangeState(GetComponent<RespawnState>());
+        GameManager.Instance.ChangeCamera(GameCamera.Respawn);
+    }
+
+    public void ResetPlayer()
+    {
+        transform.position = Vector3.zero;
+        animator?.SetTrigger("Idle");
+        PausePlayer();
+        ChangeState(GetComponent<RunnigState>());
+       
     }
 }

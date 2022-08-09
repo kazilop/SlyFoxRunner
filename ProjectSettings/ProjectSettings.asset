@@ -132,7 +132,7 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 0.1.2
+  bundleVersion: 0.1.3
   preloadedAssets:
   - {fileID: 11400000, guid: 2e5b7b958906e714fad4e8f7cd7fe4f1, type: 2}
   metroInputSource: 0
@@ -274,7 +274,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 04d61f0c9b6f34447a9503fa597aaee8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 1566c7803619e5f4fac02ecc5423e614, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -438,12 +438,16 @@ PlayerSettings:
       m_Height: 36
       m_Kind: 0
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 1566c7803619e5f4fac02ecc5423e614, type: 3}
+      - {fileID: 2800000, guid: 1566c7803619e5f4fac02ecc5423e614, type: 3}
       m_Width: 432
       m_Height: 432
       m_Kind: 2
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 1566c7803619e5f4fac02ecc5423e614, type: 3}
+      - {fileID: 0}
       m_Width: 324
       m_Height: 324
       m_Kind: 2
@@ -463,7 +467,9 @@ PlayerSettings:
       m_Height: 108
       m_Kind: 2
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 0}
+      - {fileID: 2800000, guid: 1566c7803619e5f4fac02ecc5423e614, type: 3}
       m_Width: 81
       m_Height: 81
       m_Kind: 2

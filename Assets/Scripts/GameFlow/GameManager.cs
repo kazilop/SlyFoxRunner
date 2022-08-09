@@ -1,6 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+
+public enum GameCamera
+{
+    Init = 0,
+    Game = 1,
+    Shop = 2,
+    Respawn = 3
+}
+
 
 public class GameManager : MonoBehaviour
 {
@@ -8,7 +16,11 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
 
     public PlayerMotor motor;
+    public GameObject[] cameras;
 
+    public SceneChunkGenerator sceneChunkGeneration;
+
+    public WorldGeneration worldGeneration;
 
     private GameState state;
 
@@ -29,5 +41,13 @@ public class GameManager : MonoBehaviour
         state.Detruct();
         state = s;
         state.Construct();
+    }
+
+    public void ChangeCamera(GameCamera c)
+    {
+        foreach(GameObject go in cameras)
+            go.SetActive(false);
+
+        cameras[(int)c].SetActive(true);
     }
 }

@@ -22,11 +22,14 @@ public class GameStateDeath : GameState
     public void ToMenu()
     {
         brain.ChangeState(GetComponent<GameStateInit>());
+
+        GameManager.Instance.motor.ResetPlayer();
     }
 
     public void ResumeGame()
     {
-        GameManager.Instance.motor.RespawnPlayer();
         brain.ChangeState(GetComponent<GameStateGame>());
+        GameManager.Instance.motor.RespawnPlayer();
+        GameManager.Instance.worldGeneration.ResetWorld();
     }
 }
