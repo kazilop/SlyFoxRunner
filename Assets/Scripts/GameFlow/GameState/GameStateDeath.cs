@@ -24,6 +24,8 @@ public class GameStateDeath : GameState
         brain.ChangeState(GetComponent<GameStateInit>());
 
         GameManager.Instance.motor.ResetPlayer();
+        GameManager.Instance.worldGeneration.ResetWorld();
+        GameManager.Instance.sceneChunkGeneration.ResetWorld();
     }
 
     public void ResumeGame()
@@ -31,5 +33,7 @@ public class GameStateDeath : GameState
         brain.ChangeState(GetComponent<GameStateGame>());
         GameManager.Instance.motor.RespawnPlayer();
         GameManager.Instance.worldGeneration.ResetWorld();
+        GameManager.Instance.sceneChunkGeneration.ResetWorld();
+        
     }
 }

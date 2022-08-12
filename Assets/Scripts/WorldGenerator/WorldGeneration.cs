@@ -34,11 +34,14 @@ public class WorldGeneration : MonoBehaviour
         }
     }
 
-
+    private void Update()
+    {
+        ScanPosition();
+    }
 
     public void ScanPosition()
     {
-        float cameraZ = cameraTransform.transform.position.z;
+        float cameraZ = cameraTransform.position.z;
         Chunk lastChunk = activeChunks.Peek();
 
         if (cameraZ >= lastChunk.transform.position.z + lastChunk.chunkLength + despawnDistance)
@@ -52,7 +55,7 @@ public class WorldGeneration : MonoBehaviour
     {
         int randomIndex = Random.Range(0, chunkPrefab.Count);
 
-        Chunk chunk = chunkPool.Find(x => !x.gameObject.activeSelf && x.name == (chunkPrefab[randomIndex].name + "(Clone)"));
+        Chunk chunk  = chunkPool.Find(x => !x.gameObject.activeSelf && x.name == (chunkPrefab[randomIndex].name + "(Clone)"));
 
         if (!chunk)
         {

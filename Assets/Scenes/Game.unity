@@ -387,7 +387,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.65520173, y: 0.000000058493832, z: -0.000000050731433, w: 0.755454}
+  m_LocalRotation: {x: 0.65520173, y: -0.000000058493832, z: 0.000000050731433, w: 0.755454}
   m_LocalPosition: {x: 0, y: 5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -607,7 +607,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590521439}
-  m_LocalRotation: {x: 0.65520173, y: 0.000000058493832, z: -0.000000050731433, w: 0.755454}
+  m_LocalRotation: {x: 0.65520173, y: -0.000000058493832, z: 0.000000050731433, w: 0.755454}
   m_LocalPosition: {x: 0, y: 5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1673,8 +1673,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf856e114a5c01841b41535c8e5804ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstChunkSpawnPosition: 5
-  chunkOnScreen: 8
+  firstChunkSpawnPosition: -5
+  chunkOnScreen: 10
   despawnDistance: 5
   chunkPrefab:
   - {fileID: 8117704009225065295, guid: b7cadc64ba99a884b8329325cc81926e, type: 3}
