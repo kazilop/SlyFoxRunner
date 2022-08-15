@@ -1,9 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneChunkGenerator : WorldGeneration
 {
-    public void ScanPosition()
+    private void Update()
     {
-
+        ScanPosition();
     }
 }

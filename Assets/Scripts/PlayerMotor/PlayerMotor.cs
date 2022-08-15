@@ -127,6 +127,7 @@ public class PlayerMotor : MonoBehaviour
 
     public void ResetPlayer()
     {
+        currentLane = 0;
         transform.position = Vector3.zero;
         animator?.SetTrigger("Idle");
         PausePlayer();

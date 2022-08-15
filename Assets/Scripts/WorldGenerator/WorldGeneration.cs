@@ -8,7 +8,7 @@ public class WorldGeneration : MonoBehaviour
     private Queue<Chunk> activeChunks = new Queue<Chunk>();
     private List<Chunk> chunkPool = new List<Chunk>();
 
-    [SerializeField] private int firstChunkSpawnPosition = -10;
+    [SerializeField] private int firstChunkSpawnPosition = 5;
     [SerializeField] private int chunkOnScreen = 3;
     [SerializeField] private float despawnDistance = 5f;
 
@@ -34,10 +34,10 @@ public class WorldGeneration : MonoBehaviour
         }
     }
 
-    private void Update()
+  /*  private void Update()
     {
         ScanPosition();
-    }
+    } */
 
     public void ScanPosition()
     {
@@ -63,6 +63,7 @@ public class WorldGeneration : MonoBehaviour
             chunk = go.GetComponent<Chunk>();
         }
 
+        
         chunk.transform.position = new Vector3(0, 0, chunkSpawnZ);
         chunkSpawnZ += chunk.chunkLength;
 
@@ -80,13 +81,14 @@ public class WorldGeneration : MonoBehaviour
     public void ResetWorld()
     {
         chunkSpawnZ = firstChunkSpawnPosition;
+        transform.position = Vector3.zero;
 
         for(int i = activeChunks.Count; i != 0; i--)
         {
             DeleteLastChunk();
         }
 
-        for (int i = 0; i < chunkOnScreen; i++)
+        for (int k = 0; k < chunkOnScreen; k++)
             SpawnNewChunk();
     }
 }
