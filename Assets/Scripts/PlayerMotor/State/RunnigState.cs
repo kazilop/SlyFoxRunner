@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class RunnigState : BaseState
 {
+    [SerializeField] private float speedModifier = 30.0f;
     public override void Construct()
     {
         motor.verticalVelocity = 0;
@@ -37,7 +38,7 @@ public class RunnigState : BaseState
 
         m.x = motor.SnapToLane();
         m.y = -1.0f;
-        m.z = motor.baseRunSpeed;
+        m.z = motor.baseRunSpeed + GameStats.Instance.score / speedModifier;
 
         return m;
     }
