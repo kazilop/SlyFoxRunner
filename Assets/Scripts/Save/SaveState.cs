@@ -19,5 +19,6 @@ public class SaveState
 
         UnlockedItemFlag = new byte[ITEM_COUNT];
         UnlockedItemFlag[0] = 1;
+        
     }
 }

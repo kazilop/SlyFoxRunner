@@ -16,7 +16,7 @@ public class ItemLogic : MonoBehaviour
     private void Start()
     {
         SpawnItemOnPlayer();
-        SelectItem(1);
+        SelectItem(SaveManager.Instance.save.CurrentItem);
     }
 
     private void SpawnItemOnPlayer()

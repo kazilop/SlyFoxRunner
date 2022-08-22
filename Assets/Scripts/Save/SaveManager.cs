@@ -9,7 +9,7 @@ public class SaveManager : MonoBehaviour
     private static SaveManager instance;
 
     public SaveState save;
-    private const string saveFileName = "Foxdata.dat";
+    private const string saveFileName = "/Foxdata.dat";
     private BinaryFormatter formatter;
 
     public Action<SaveState> OnLoad;
@@ -27,7 +27,7 @@ public class SaveManager : MonoBehaviour
     public void Load()
     {
         try
-        {
+        {                                      // Application.persistentDataPath + saveFileName
             FileStream file = new FileStream(Application.persistentDataPath + saveFileName, FileMode.Open, FileAccess.Read);
             save = (SaveState)formatter.Deserialize(file);
             file.Close();

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Hat
   m_EditorClassIdentifier: 
   ItemName: Helmet
-  ItemPrice: 55
-  Thumbnail: {fileID: 21300000, guid: 2bf3a2ed47747104294b9fa171d6ff4d, type: 3}
-  Model: {fileID: 100000, guid: 1ce613419e4995747b834a066550c55d, type: 3}
+  ItemPrice: 5
+  Thumbnail: {fileID: 21300000, guid: 7a0526cb331158749a938a8f430ea546, type: 3}
+  Model: {fileID: 5358752835737767734, guid: a95dc46bfb8173e449ffddc1e09dae32, type: 3}

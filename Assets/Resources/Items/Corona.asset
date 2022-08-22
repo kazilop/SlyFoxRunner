@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Corona Hat
   ItemPrice: 10
-  Thumbnail: {fileID: 21300000, guid: 7cd7b8898662db648970105ea53d8cf0, type: 3}
-  Model: {fileID: 100000, guid: aa7a33fd1d3f6e04f86d6eee5cc1deda, type: 3}
+  Thumbnail: {fileID: 21300000, guid: 4f815d65013d1b044960a38c3bd993b9, type: 3}
+  Model: {fileID: 8713539362150345301, guid: 585de76bf5d9d334a8abbd35264194bc, type: 3}
