@@ -60,16 +60,12 @@ public class GameStateDeath : GameState
     }
     public void ToMenu()
     {
-
-
         brain.ChangeState(GetComponent<GameStateInit>());
 
         GameManager.Instance.motor.ResetPlayer();
        
         GameManager.Instance.worldGeneration.ResetWorld();
         GameManager.Instance.sceneChunkGeneration.ResetWorld();
-
-        
     }
 
     public void ResumeGame()
