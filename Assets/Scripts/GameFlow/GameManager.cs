@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         state = GetComponent<GameStateInit>();
         state.Construct();
+             
     }
 
     private void Update()

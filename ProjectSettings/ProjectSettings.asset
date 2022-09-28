@@ -132,7 +132,7 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 0.2.4
+  bundleVersion: 0.2.45
   preloadedAssets:
   - {fileID: 11400000, guid: 2e5b7b958906e714fad4e8f7cd7fe4f1, type: 2}
   metroInputSource: 0
@@ -869,7 +869,9 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Collab: 0
+    Unity Ads: 1
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -883,11 +885,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 1
-  cloudProjectId: 
+  cloudProjectId: cf73949e-7cd1-4bdf-b3c3-df121cc80d8e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: SlyFoxRunner
+  organizationId: seledkinstudio
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
