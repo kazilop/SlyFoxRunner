@@ -4,10 +4,13 @@ public class DeathState : BaseState
 {
     [SerializeField] private Vector3 knockbackForce = new Vector3(0, 4, -3);
     private Vector3 currentKnockback;
+
+    public AudioClip deathClip;
     public override void Construct()
     {
         motor.animator?.SetTrigger("Death");
         currentKnockback = knockbackForce;
+        PlaySound();
     }
     public override Vector3 ProcessMotion()
     {
@@ -25,6 +28,12 @@ public class DeathState : BaseState
         }
 
         return currentKnockback;
+    }
+
+    private void PlaySound()
+    {
+        playerAudio.clip = deathClip;
+        playerAudio.Play();
     }
 
 }

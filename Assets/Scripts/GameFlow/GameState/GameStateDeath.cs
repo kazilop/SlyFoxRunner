@@ -13,10 +13,12 @@ public class GameStateDeath : GameState
     [SerializeField] private Image completionCircle;
 
     private float deathTime;
+    private RewardedAds _rewardedAds;
 
     public float timeToDecision = 3.0f;
     public override void Construct()
     {
+        _rewardedAds = GetComponent<RewardedAds>();
         GameManager.Instance.motor.PausePlayer();
         deathUI.SetActive(true);
         completionCircle.gameObject.SetActive(true);
@@ -70,7 +72,19 @@ public class GameStateDeath : GameState
 
     public void ResumeGame()
     {
-        brain.ChangeState(GetComponent<GameStateGame>());
-        GameManager.Instance.motor.RespawnPlayer();      
+        TryAd();
+        if (_rewardedAds.isReady)
+        { 
+            brain.ChangeState(GetComponent<GameStateGame>());
+            GameManager.Instance.motor.RespawnPlayer();  
+        }    
+    }
+
+    private void TryAd()
+    {
+        _rewardedAds.LoadAd();
+        _rewardedAds.ShowAd();
+
+        _rewardedAds.isReady = true;
     }
 }

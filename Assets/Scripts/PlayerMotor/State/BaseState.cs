@@ -3,6 +3,7 @@ using UnityEngine;
 public abstract class BaseState : MonoBehaviour
 {
     protected PlayerMotor motor;
+    protected AudioSource playerAudio;
     public virtual void Construct() {}
     public virtual void Destruct() {}
     public virtual void Transition() 
@@ -13,6 +14,7 @@ public abstract class BaseState : MonoBehaviour
     private void Awake()
     {
         motor = GetComponent<PlayerMotor>();
+        playerAudio = GetComponent<AudioSource>();
     }
 
     public virtual Vector3 ProcessMotion()

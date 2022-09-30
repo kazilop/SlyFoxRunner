@@ -1,16 +1,11 @@
-using System;
 using UnityEngine;
 
 public class JumpingState : BaseState
 {
     public float jumpForce = 7.0f;
     public AudioClip jumpClip;
-    public AudioSource playerAudio;
 
-    private void Awake()
-    {
-        playerAudio = GetComponent<AudioSource>();
-    }
+    
     public override void Construct()
     {
         motor.animator?.SetTrigger("Jump");

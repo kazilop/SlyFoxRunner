@@ -11,6 +11,21 @@ public class AdManager : MonoBehaviour, IUnityAdsInitializationListener
     [SerializeField] bool _testMode = false;
     private string _gameId;
 
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        InitializeAds();
+    }
+
 
     public void InitializeAds()
     {
@@ -29,19 +44,5 @@ public class AdManager : MonoBehaviour, IUnityAdsInitializationListener
     {
         Debug.Log("Ads error");
     }
-
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-
-        InitializeAds();
-    }
+   
 }

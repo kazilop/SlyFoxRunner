@@ -61,6 +61,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1386154300459846144}
     m_Modifications:
+    - target: {fileID: 6085789400898594172, guid: 7371fb78649776249b74958bc7ae30b2,
+        type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: bdfa0ba711ebd0446b2d927eaf1b9d0d, type: 3}
     - target: {fileID: 7077655182971711703, guid: 7371fb78649776249b74958bc7ae30b2,
         type: 3}
       propertyPath: m_RootOrder

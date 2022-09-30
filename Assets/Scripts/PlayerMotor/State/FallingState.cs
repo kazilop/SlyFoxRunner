@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class FallingState : BaseState
 {
+    public AudioClip jumpClip;
     public override void Construct()
     {
         motor.animator?.SetTrigger("Fall");
+        //PlaySound();
     }
     public override Vector3 ProcessMotion()
     {
@@ -25,5 +27,11 @@ public class FallingState : BaseState
         {
             motor.ChangeState(GetComponent<RunnigState>());
         }
+    }
+
+    private void PlaySound()
+    {
+        playerAudio.clip = jumpClip;
+        playerAudio.Play();
     }
 }
